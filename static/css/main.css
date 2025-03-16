@@ -1,0 +1,27 @@
+body {
+    background-color: #e6f7f7;
+}
+.navbar {
+    background-color: #004d4d; /* Dark Blue */
+}
+.navbar .nav-link, .navbar .navbar-brand {
+    color: #ffffff !important;
+}
+.btn-light {
+    background-color: #f8f9fa; /* Slightly lighter button */
+    color: #004c8c; /* Matching dark blue text */
+}
+.card {
+    background-color: #ff6f61; /* Coral Red */
+    color: #ffffff;
+    border: none;
+}
+.card-title {
+    font-weight: bold;
+}
+.carousel-inner img {
+    object-fit: cover;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
+}

@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+
+{%block head%}
+<link rel="stylesheet" href ="{{ url_for('static',filename='css/founders.css')}}">
+{%endblock%}
+
+{%block body%}
+<div class="container founders-container">
+    <h2 class="section-title">Meet the Founders</h2> <!-- Title for the section -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="founder-card">
+                <img src="../static/images/founder1.png" alt="Founder 1">
+                <div class="founder-card-body">
+                    <h5 class="founder-name">Girish Alva</h5>
+                    <p class="founder-title">Co-Founder & CEO</p>
+                    <p class="founder-bio">Girish Alva, a visionary entrepreneur, has a decade of experience in leading tech-driven initiatives. He is passionate about innovation and building sustainable solutions for the future.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="founder-card">
+                <img src="../static/images/founder2.jpg" alt="Founder 2">
+                <div class="founder-card-body">
+                    <h5 class="founder-name">Balakrishna Rai</h5>
+                    <p class="founder-title">Co-Founder & COO</p>
+                    <p class="founder-bio">Bala Rai has dedicated his career to promoting social equity and transforming lives through education and health. As the Chief Operating Officer, she ensures the efficient execution of the organization’s initiatives and drives the day-to-day operations. Her strategic mindset and commitment to sustainability have been key to the organization’s growth.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="founder-card">
+                <img src="../static/images/founder3.png" alt="Founder 3">
+                <div class="founder-card-body">
+                    <h5 class="founder-name">Raju Chowta</h5>
+                    <p class="founder-title">Co-Founder & CMO</p>
+                    <p class="founder-bio">Raju has a deep understanding of both the education and healthcare sectors. As the Chief Marketing Officer, he is responsible for communicating the organization's mission and impact to the world. With a background in communications and marketing, he has built the brand into a trusted name within the industry.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

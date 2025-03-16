@@ -1,0 +1,64 @@
+body {
+    background-color: #e6f7f7;
+    /* Light teal background */
+}
+
+.navbar {
+    background-color: #004d4d;
+    /* Dark teal navbar */
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: #ffe599 !important;
+    /* Soft yellow hover effect */
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:nth-child(1) {
+    background-color: #ff6f61;
+    /* Coral red */
+}
+
+.card:nth-child(2) {
+    background-color: #ff8a65;
+    /* Light coral */
+}
+
+.card:nth-child(3) {
+    background-color: #ffb74d;
+    /* Orange */
+}
+
+.card:nth-child(4) {
+    background-color: #ffd54f;
+    /* Yellow-orange */
+}
+
+.card:nth-child(5) {
+    background-color: #ffe082;
+    /* Soft yellow */
+}
+
+h1,
+h2 {
+    color: #004d4d;
+    /* Dark teal for headers */
+}
