@@ -33,7 +33,9 @@ def health():
 def education():
     return render_template('education.html')
 
-
+@app.route("/chatbot")
+def chatbot():
+    return render_template("chatbot.html")
 
 
 if __name__ =="__main__":
