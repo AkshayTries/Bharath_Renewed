@@ -42,12 +42,50 @@
 
     
     
+    
     <iframe src="{{ url_for('chatbot') }}" style="position: fixed; bottom: 20px; right:5px; width: 350px; height: 2000px; border: none; background: transparent; z-index: 9999;"></iframe>
-{%block body%}
+    
+    {%block body%}
 
 {%endblock%}
     
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <!-- Left Section -->
+          <div class="col-md-6">
+              <h5>Bharath Charitable Trust</h5>
+              <h6><strong>Foundation Center</strong></h6>
+              <p>B-301,Rebello Enclave CHS 23rd Road MIDC Chakala Midc Mumbai Mumbai MH 400093 IN</p>
+              <p>
+                  <a href="tel:+918040924050" class="contact-link"><strong>+91 6366214819</strong></a> |
+                  <a href="mailto:act.trust@gmail.com" class="contact-link">akshayalva030303@gmail.com</a>
+              </p>
+          </div>
 
+          <!-- Middle Section -->
+          <div class="col-md-3">
+              <h6><strong>Our Work</strong></h6>
+              <ul class="footer-links">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/education">Education</a></li>
+                  <li><a href="/health">Health</a></li>
+                  <li><a href="/causes">Causes</a></li>
+                  <li><a href="/founders">Founders</a></li>
+              </ul>
+          </div>
+
+          <!-- Right Section -->
+          <div class="col-md-3">
+              <h6><strong>Find Us</strong></h6>
+              <ul class="footer-links">
+                <li><a href="/founders">Founders</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

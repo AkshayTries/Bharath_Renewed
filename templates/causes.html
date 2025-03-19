@@ -1,11 +1,11 @@
-{%extends 'base.html'%}
+{% extends 'base.html' %}
 
-{%block head%}
-<link rel="stylesheet" href ="{{ url_for('static',filename='css/causes.css')}}">
-{%endblock%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/causes.css') }}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for AJAX -->
+{% endblock %}
 
-
-{%block body%}
+{% block body %}
 <div class="container mt-4">
     <div class="row">
         <!-- Cause 1 -->
@@ -15,61 +15,82 @@
                 <div class="card-body">
                     <h5 class="card-title">Help Ruchika Get a Leg Surgery</h5>
                     <p class="card-text">Ruchika needs urgent surgery in the UK. Your contribution can change her life.</p>
-                    <a href="#" class="btn btn-success">Donate Now</a>
+                    <progress value="40" max="100" style="width:100%;"></progress>
+                    <p>40% funded</p>
+                    <button class="btn btn-primary donate-btn" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</button>
                 </div>
             </div>
         </div>
-
-        <!-- Cause 2 -->
         <div class="col-md-4">
             <div class="card">
                 <img src="static/images/cause2.png" class="card-img-top" alt="Cause Image">
                 <div class="card-body">
-                    <h5 class="card-title">Support Orphanage Education</h5>
-                    <p class="card-text">Providing education and resources for underprivileged children in India.</p>
-                    <a href="#" class="btn btn-success">Donate Now</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cause 3 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="static/images/cause3.png" class="card-img-top" alt="Cause Image">
-                <div class="card-body">
                     <h5 class="card-title">Medical Help for Cancer Patient</h5>
                     <p class="card-text">Fundraising for a young cancer patient’s chemotherapy treatment.</p>
-                    <a href="#" class="btn btn-success">Donate Now</a>
+                    <progress value="70" max="100" style="width:100%;"></progress>
+                    <p>70% funded</p>
+                    <button class="btn btn-primary donate-btn" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</button>
                 </div>
             </div>
         </div>
-        <!-- Cause 4 -->
-<div class="col-md-4">
-    <div class="card">
-        <img src="static/images/cause4.png" class="card-img-top" alt="Cause Image">
-        <div class="card-body">
-            <h5 class="card-title">Food for Flood Victims</h5>
-            <p class="card-text">Help provide meals to families affected by recent floods.</p>
-            <a href="#" class="btn btn-success">Donate Now</a>
+    </div>
+</div>
+
+<!-- Modal for Donation -->
+<div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="donateModalLabel">Donate Now</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="donationForm">
+                    <div class="mb-3">
+                        <label for="donorName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="donorName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="donorPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="donorPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="donationAmount" class="form-label">Enter Amount (₹)</label>
+                        <input type="number" class="form-control" id="donationAmount" required>
+                    </div>
+                    <button type="button" class="btn btn-secondary w-100" id="generateQR">Generate QR Code</button>
+
+                    <div class="text-center mt-3" id="qrContainer" style="display:none;">
+                        <p>Scan the QR code below to proceed with the donation:</p>
+                        <img id="qrCode" src="" alt="QR Code" class="img-fluid" width="200">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">I have donated</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
+<script>
+    $(document).ready(function() {
+        $("#generateQR").click(function() {
+            var amount = $("#donationAmount").val();
+            if (amount && amount > 0) {
+                $.ajax({
+                    url: "/generate_qr",
+                    type: "POST",
+                    data: { amount: amount },
+                    success: function(response) {
+                        $("#qrCode").attr("src", response.qr_url);
+                        $("#qrContainer").show();
+                    }
+                });
+            } else {
+                alert("Please enter a valid donation amount.");
+            }
+        });
+    });
+</script>
 
-
-<!-- Cause 6 -->
-<div class="col-md-4">
-    <div class="card">
-        <img src="static/images/cause5.png" class="card-img-top" alt="Cause Image">
-        <div class="card-body">
-            <h5 class="card-title">Provide Clean Drinking Water</h5>
-            <p class="card-text">Help install water filters in rural areas with poor water quality.</p>
-            <a href="#" class="btn btn-success">Donate Now</a>
-        </div>
-    </div>
-</div>
-
-    </div>
-</div>
-
-{%endblock%}
+{% endblock %}

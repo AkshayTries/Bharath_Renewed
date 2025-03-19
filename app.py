@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect
-from flask import jsonify
+from flask import jsonify,url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import smtplib
+import qrcode
 import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -83,6 +84,22 @@ def contact():
         
     else:
         return render_template('contactus.html')
+
+@app.route('/generate_qr', methods=['POST'])
+def generate_qr():
+    amount = request.form.get("amount")
+    
+    if not amount:
+        return jsonify({"error": "Invalid amount"}), 400
+
+    payment_link = f"upi://pay?pa=akshayalva030303@okicici&pn=CharityFund&mc=1234&tid=0001&tr=123456&tn=Donation&am={amount}&cu=INR"
+    
+    qr = qrcode.make(payment_link)
+    qr_path = os.path.join("static/images", "payment_qr.png")
+    qr.save(qr_path)
+
+    return jsonify({"qr_url": url_for('static', filename='images/payment_qr.png')})
+
 
 @app.route('/founders')
 def founders():
