@@ -14,30 +14,60 @@
             <div class="card">
                 <h5>Ayushman Bharat</h5>
                 <p>Provides free health insurance coverage of up to ₹5 lakh per family annually.</p>
+                <button class="btn btn-primary btn-sm" onclick="toggleDetails('s1')">View More</button>
+                <div id="s1" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>Janani Suraksha Yojana</h5>
                 <p>Promotes safe motherhood through institutional delivery and financial incentives.</p>
+                 <button class="btn btn-primary btn-sm" onclick="toggleDetails('s2')">View More</button>
+                <div id="s2" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>National Health Mission</h5>
                 <p>Improves healthcare access for rural and urban populations, especially vulnerable groups.</p>
+                <button class="btn btn-primary btn-sm" onclick="toggleDetails('s3')">View More</button>
+                <div id="s3" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>PM National Dialysis Program</h5>
                 <p>Provides free dialysis services to patients with end-stage kidney disease.</p>
+                 <button class="btn btn-primary btn-sm" onclick="toggleDetails('s4')">View More</button>
+                <div id="s4" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>Rashtriya Bal Swasthya Karyakram</h5>
                 <p>Ensures early detection and treatment of diseases in children.</p>
+                 <button class="btn btn-primary btn-sm" onclick="toggleDetails('s5')">View More</button>
+                <div id="s5" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -48,6 +78,7 @@
             <div class="card">
                 <h5>Doctors For You</h5>
                 <p>Offers disaster relief and healthcare services to underprivileged communities.</p>
+                 
             </div>
         </div>
         <div class="col-md-4 mb-4">
@@ -76,4 +107,5 @@
         </div>
     </div>
 </div>
+<script src="{{ url_for('static', filename='js/health.js') }}"></script>
 {%endblock%}

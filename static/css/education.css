@@ -63,3 +63,11 @@ h2 {
     color: #004d4d;
     /* Matching text color with navbar */
 }
+
+.scheme-details {
+    display: none;
+    padding: 10px;
+    background-color: #fb948b;
+    margin-top: 5px;
+    border-radius: 5px;
+}

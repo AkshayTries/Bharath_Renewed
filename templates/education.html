@@ -9,35 +9,66 @@
     <h1 class="text-center mb-4"><strong>Education</strong></h1>
 
     <h2 class="mb-3">Government Schemes</h2>
+    
     <div class="row">
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>Midday Meal Scheme</h5>
                 <p>Provides free lunches to improve nutrition and attendance for school children.</p>
+                <button class="btn btn-primary btn-sm" onclick="toggleDetails('s1')">View More</button>
+                <div id="s1" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>National Means-cum-Merit Scholarship</h5>
                 <p>Offers financial help to prevent dropouts at the secondary level.</p>
+                 <button class="btn btn-primary btn-sm" onclick="toggleDetails('s2')">View More</button>
+                <div id="s2" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>Right to Education Act</h5>
                 <p>Ensures free and compulsory education for children aged 6-14 years.</p>
+                 <button class="btn btn-primary btn-sm" onclick="toggleDetails('s3')">View More</button>
+                <div id="s3" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>PM eVidya Program</h5>
                 <p>Offers digital learning resources for students across India.</p>
+                 <button class="btn btn-primary btn-sm" onclick="toggleDetails('s4')">View More</button>
+                <div id="s4" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <h5>Padhe Bharat Badhe Bharat</h5>
                 <p>Focuses on foundational skills in reading, writing, and arithmetic.</p>
+                 <button class="btn btn-primary btn-sm" onclick="toggleDetails('s5')">View More</button>
+                <div id="s5" class="scheme-details">
+                    <p>✅ Eligibility: All government school students.</p>
+                    <p>📌 Objective: Improve health & school attendance.</p>
+                    <p>💡 Implementation: Central & state-funded.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -76,4 +107,5 @@
         </div>
     </div>
 </div>
+<script src="{{ url_for('static', filename='js/education.js') }}"></script>
 {%endblock%}

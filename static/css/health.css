@@ -1,11 +1,11 @@
 body {
     background-color: #e6f7f7;
-    /* Light teal background */
+    /* Light teal background for a calm feel */
 }
 
 .navbar {
     background-color: #004d4d;
-    /* Dark teal navbar */
+    /* Dark teal for navbar */
 }
 
 .navbar-brand,
@@ -16,7 +16,7 @@ body {
 .navbar-brand:hover,
 .nav-link:hover {
     color: #ffe599 !important;
-    /* Soft yellow hover effect */
+    /* Soft yellow hover for contrast */
 }
 
 .card {
@@ -32,33 +32,42 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Different card colors for variety */
 .card:nth-child(1) {
     background-color: #ff6f61;
-    /* Coral red */
+    /* Teal */
 }
 
 .card:nth-child(2) {
-    background-color: #ff8a65;
-    /* Light coral */
+    background-color: #009688;
+    /* Light teal */
 }
 
 .card:nth-child(3) {
-    background-color: #ffb74d;
-    /* Orange */
+    background-color: #00bfa5;
+    /* Aqua green */
 }
 
 .card:nth-child(4) {
-    background-color: #ffd54f;
-    /* Yellow-orange */
+    background-color: #4db6ac;
+    /* Muted aqua */
 }
 
 .card:nth-child(5) {
-    background-color: #ffe082;
-    /* Soft yellow */
+    background-color: #80cbc4;
+    /* Light aqua */
 }
 
 h1,
 h2 {
     color: #004d4d;
-    /* Dark teal for headers */
+    /* Matching text color with navbar */
+}
+
+.scheme-details {
+    display: none;
+    padding: 10px;
+    background-color: #fb948b;
+    margin-top: 5px;
+    border-radius: 5px;
 }
