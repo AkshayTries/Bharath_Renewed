@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, redirect
+from flask import jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
+from indexing import indexer
 
 
 
@@ -96,5 +97,16 @@ def education():
 def chatbot():
     return render_template("chatbot.html")
 
+
+@app.route("/respond", methods=["POST"])
+def respond():
+    user_message = request.json.get("message", "")
+    bot_response = indexer(user_message)  # Call your chatbot function
+    return jsonify({"response": bot_response})
+
+
+@app.route("/causes")
+def causes():
+    return render_template("causes.html")
 if __name__ == "__main__":
     app.run(debug=True)
