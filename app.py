@@ -3,18 +3,21 @@ from flask import jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import smtplib
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from indexing import indexer
 
+from dotenv import load_dotenv
 
+
+load_dotenv()
 
 SMTP_SERVER = "smtp.gmail.com"  # Use your email provider's SMTP server
 SMTP_PORT = 587  # Port for Gmail SMTP (use 465 for SSL)
-EMAIL_ADDRESS = "akshayalva030303@gmail.com"
-recipient = "akshayalva030303@gmail.com"
-EMAIL_PASSWORD = "fgpu uxzk mjxs tzkv"
-
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+recipient = os.getenv("recipient")
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bharathDB.db'  # Corrected typo here
 db = SQLAlchemy(app)  # Initialising the database

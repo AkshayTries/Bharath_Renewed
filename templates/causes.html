@@ -1,1 +1,75 @@
 {%extends 'base.html'%}
+
+{%block head%}
+<link rel="stylesheet" href ="{{ url_for('static',filename='css/causes.css')}}">
+{%endblock%}
+
+
+{%block body%}
+<div class="container mt-4">
+    <div class="row">
+        <!-- Cause 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="static/images/cause1.png" class="card-img-top" alt="Cause Image">
+                <div class="card-body">
+                    <h5 class="card-title">Help Ruchika Get a Leg Surgery</h5>
+                    <p class="card-text">Ruchika needs urgent surgery in the UK. Your contribution can change her life.</p>
+                    <a href="#" class="btn btn-success">Donate Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cause 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="static/images/cause2.png" class="card-img-top" alt="Cause Image">
+                <div class="card-body">
+                    <h5 class="card-title">Support Orphanage Education</h5>
+                    <p class="card-text">Providing education and resources for underprivileged children in India.</p>
+                    <a href="#" class="btn btn-success">Donate Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cause 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="static/images/cause3.png" class="card-img-top" alt="Cause Image">
+                <div class="card-body">
+                    <h5 class="card-title">Medical Help for Cancer Patient</h5>
+                    <p class="card-text">Fundraising for a young cancer patient’s chemotherapy treatment.</p>
+                    <a href="#" class="btn btn-success">Donate Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- Cause 4 -->
+<div class="col-md-4">
+    <div class="card">
+        <img src="static/images/cause4.png" class="card-img-top" alt="Cause Image">
+        <div class="card-body">
+            <h5 class="card-title">Food for Flood Victims</h5>
+            <p class="card-text">Help provide meals to families affected by recent floods.</p>
+            <a href="#" class="btn btn-success">Donate Now</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Cause 6 -->
+<div class="col-md-4">
+    <div class="card">
+        <img src="static/images/cause5.png" class="card-img-top" alt="Cause Image">
+        <div class="card-body">
+            <h5 class="card-title">Provide Clean Drinking Water</h5>
+            <p class="card-text">Help install water filters in rural areas with poor water quality.</p>
+            <a href="#" class="btn btn-success">Donate Now</a>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+{%endblock%}
