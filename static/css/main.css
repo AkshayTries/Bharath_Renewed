@@ -56,3 +56,25 @@ body {
 .contact-link {
     font-weight: bold;
 }
+/* Logo Styling */
+.logo-img {
+    height: 60px; /* Adjust size */
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Custom Font Styling */
+@font-face {
+    font-family: 'CustomTrustFont';
+    src: url('../fonts/custom-trust-font.ttf'); /* Place font file in static/fonts */
+}
+
+.trust-name {
+    font-family: 'garamond', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #eab812; /* Match the color from the attached image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        margin-right: 100px; /* Increase space between trust name and nav links */
+
+}

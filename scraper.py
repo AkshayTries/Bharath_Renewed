@@ -38,4 +38,4 @@ def process_txt_files(directory):
 
 if __name__ == "__main__":
     create_db()
-    process_txt_files("fodder/")
+    process_txt_files("fodder/text_files")

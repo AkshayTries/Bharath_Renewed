@@ -1,3 +1,6 @@
+flask
+flask-sqlalchemy
+qrcode[pil]
 python-dotenv
 requests
 pymupdf
