@@ -121,7 +121,12 @@ def chatbot():
 @app.route("/respond", methods=["POST"])
 def respond():
     user_message = request.json.get("message", "")
-    bot_response = indexer(user_message)  # Call your chatbot function
+    # bot_response = indexer(user_message)  # Call your chatbot function
+    try:
+        bot_response = indexer(user_message)  # Call your chatbot function
+    except Exception:
+        bot_response = "hey there"  # Default response in case of an error
+
     return jsonify({"response": bot_response})
 
 
