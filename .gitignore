@@ -1,5 +1,5 @@
 .env
 venv/
 instance/
-index_storage/
 __pycache__/
+instance/

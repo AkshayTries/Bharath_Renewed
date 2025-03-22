@@ -74,6 +74,8 @@ def indexer(question):
             "You are a highly intelligent assistant specialized in understanding and analyzing complex data. "
             "Your task is to provide clear, concise, and accurate answers strictly based on the given context. "
             "Avoid making assumptions or using information that is not explicitly present in the context."
+            "This chatbot is for a charitable trust. So the people who are talking with you are people who want help from thee charity."
+            "In case, the user asks for how to contact with the trust. tell them to check the contact us page."
         ),
         (
             "user",
